@@ -4,6 +4,8 @@ int P1HP = 100;
 
 int P2HP = 100;
 
+
+
 Console.WriteLine("P1 chose your name");
 string name;
 name = Console.ReadLine();
@@ -19,7 +21,7 @@ Console.WriteLine("Press Enter To Atack");
 
 Console.ReadLine(); 
 
-while (P1HP > 0 && P2HP > 0)
+while (P1HP >= 0 && P2HP >= 0)
 {
     Random generator = new Random();
 
@@ -36,18 +38,18 @@ while (P1HP > 0 && P2HP > 0)
     Console.ReadLine();
 }
 
-if (P1HP < 0 && P2HP <0)
+if (P1HP <= 0 && P2HP <= 0)
 {
-    Console.WriteLine("DRAW, BOTH MATCH EACH OTHERS POWER!!!");
+    Console.WriteLine("DRAW, BOTH HAS DIED!!!");
 }
 
-else if (P1HP < 0)
+else if (P1HP <= 0)
 {
-    Console.WriteLine(name2 + " has beaten " + name + " to a pulp");
+    Console.WriteLine("KO!!! " + name2 + " has beaten " + name + "!");
 }
-else if (P2HP < 0)
+else if (P2HP <= 0)
 {
-    Console.WriteLine(name + " has beaten P2 " + name2 + " to a pulp");
+    Console.WriteLine("KO!!!" + name + " has beaten " + name2 + "!");
 }
 
 Console.ReadLine(); 
